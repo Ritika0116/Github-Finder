@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* dark background - rgba(20,29,47,255) */
+/* double dark background - rgb(37, 150, 190) */
+
+:root {
+    --bg: #f6f8ff;
+    --bg-content: #fefefe;
+    --text: #4b6a9b;
+    --text-alt: #2b3442;
+    --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    --shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    --icon-bg: brightness(100%);
+    /* Btn */
+    --btn: #0079ff;
+    --btn-hover: #60abff;
+}
+
+body {
+    background-color: var(--bg);
+    font-size: 13px;
+    color: var(--text);
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+}
+
+body.dark-mode {
+  --bg: #141d2f;
+  --bg-content: #1e2a47;
+  --text: white;
+  --text-alt: white;
+}
+
+.wrapper {
+    width: 327px;
+    position: absolute;
+    margin-top: 13rem;
+    margin-left: 35rem;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-top: 19rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--text);
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-family: "Space Mono", monospace;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#search {
+    position: relative;
+    background-color: var(--bg-content);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    height: 4rem;
+    padding: 6px;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(./assets/images/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position-x: 24px;
+    background-position-y: center;
+    background-size: 20px;
+    width: 40rem;
+}
+
+#input {
+    border: none;
+    width: 80%;
+    outline: none;
+    background: none;
+    color: var(--text);
+    padding-left: 15px;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+#input::placeholder {
+    color: var(--text);
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+.search img {
+    height: 20px;
+    width: 20px;
+    padding: 0 10px 0px 16px;
+}
+
+#btn-search {
+    min-width: 84px;
+    padding: 16px 25px;
+    background-color: var(--btn);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+#btn-search:hover {
+    cursor: pointer;
+    background-color: var(--btn-hover);
+}
+
+#btn-search:active {
+    transform: scale(0.975);
+}
+
+.github-repo {
+    background-color: var(--bg-content);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    padding: 24px;
+    width: 40rem;
+}
+
+.repo-heading {
+    display: flex;
+}
+
+#avatar {
+    width: 120px;
+    border-radius: 90px;
+}
+
+.user-credentials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 28rem;
+
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+#repo-user-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-alt);
+    font-family: "Space Mono", monospace;
+}
+
+#repo-join-date {
+    font-size: 16px;
+    font-family: "Space Mono", monospace;
+}
+
+#repo-github-name {
+    font-size: 16px;
+    color: var(--btn);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 12px;
+    margin-left: -13px;
+}
+
+#repo-bio {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    opacity: 0.75;
+}
+
+.repo-followers {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg);
+    text-align: center;
+    border-radius: 10px;
+    padding: 18px;
+    width: 27rem;
+    margin-left: 9rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+}
+
+.heading-count {
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-family: "Space Mono", monospace;
+    letter-spacing: 0.5px;
+}
+
+.count {
+    font-size: 26px;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    color: var(--text-alt);
+    /* padding-bottom: 2rem; */
+}
+
+.repo-social-profile {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 75%;
+    margin-left: 9rem;
+}
+
+.social-data{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.social-prof {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 0.5rem;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    opacity: 0.75;
+    color: var(--icon-bg);
+}
+
+#twitter-profile{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.darkMode{
+    display: none;
+}
+
+.lightMode{
+    display: none;
+}
+
+.active{
+    display: flex;
+}
+
