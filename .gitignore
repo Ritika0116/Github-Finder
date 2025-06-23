@@ -1,0 +1,11 @@
+AppData/
+.vscode/
+*.log
+*.bin
+*.dat
+*.ini
+*.regtrans-ms
+*.blf
+*.tmp
+NTUSER*
+
